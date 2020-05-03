@@ -7,7 +7,7 @@ const val IDOL_NAME_KEY = "IDOL_NAME_KEY"
 const val IDOL_JOB_KEY = "IDOL_JOB_KEY"
 const val IDOL_AVATAR_KEY = "IDOL_AVATAR_KEY"
 
-fun generateIdols() : List<Idol>{
+fun generateIdols() : ArrayList<Idol>{
     val idols = ArrayList<Idol>()
     idols.add(Idol("Nguyen Quang Hai", "Footballer", R.drawable.quanghai))
     idols.add(Idol("Bui Tien Dung", "Footballer", R.drawable.buitiendung))
