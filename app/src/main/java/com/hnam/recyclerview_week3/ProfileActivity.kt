@@ -11,26 +11,25 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        getAndPutData()
+        getAndDisplayData()
     }
 
-    private fun getAndPutData() {
+    private fun getAndDisplayData() {
         val data = intent.extras
 
         if (data != null) {
-            val name = data.getString(STUDENT_NAME_KEY)
-            val classz = data.getString(STUDENT_CLUB_KEY)
-            val avatar = data.getInt(STUDENT_AVATAR_KEY)
+            val name = data.getString(IDOL_NAME_KEY)
+            val job = data.getString(IDOL_JOB_KEY)
+            val avatar = data.getInt(IDOL_AVATAR_KEY)
 
 
-            tvClass.text = name
             tvName.text = name
-            tvName02.text = name
-            tvClass.text = classz
+            tvFullName.text = name
+            tvJob.text = job
             Glide.with(this)
                 .load(avatar)
                 .centerCrop()
-                .placeholder(R.drawable.student_place_holder)
+                .placeholder(R.drawable.place_holder)
                 .into(ivHeader)
         }
     }
